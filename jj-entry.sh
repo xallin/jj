@@ -8,7 +8,7 @@ STDIN=$(cat)
 
 # Main Journal folder
 
-DIR=TOBEDEFINED
+DIR=~/Log
 
 # Date variables
 
@@ -20,6 +20,6 @@ NOW="$DATE"" ""$HOUR"":""$MIN"
 # Create new entry as a single file in Journal folder
 # The filename is formated as: aaaa-mm-dd~HHhMM.txt
 
-NEW="$DIR""$DATE""~""$HOUR""h""$MIN"".txt"
+NEW="$DIR""/""$DATE""~""$HOUR""h""$MIN"".txt"
 touch "$NEW"
 echo "$NOW"" ""$STDIN"$'\n' > "$NEW"

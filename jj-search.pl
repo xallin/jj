@@ -29,7 +29,7 @@ GetOptions ("from|f=s" => \$from,
 			  "number|n=i" => \$number,
 			  "or|o" => \$or,
 			  "help|h|?" => \$help,
-			  "export" => \$export
+			  "export" => \$export)
   or die("Error in command line arguments\n");
 
 # help option
@@ -54,9 +54,9 @@ if ($help) {
 
 @output=();
 
-# TO BE DEFINED
+# Log path folder TO BE DEFINED
 
-FILE: foreach $file (<"/path/to/journal/folder/*.txt">) {
+FILE: foreach $file (<"~/Log/*.txt">) {
 
   # Filter -f option
   if ($from) {
