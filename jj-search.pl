@@ -99,7 +99,6 @@ FILE: foreach $file (<"/path/to/journal/folder/*.txt">) {
 		next FILE; # no multiple same entry
 	  }
 	}
-
   } else { # AND mode
 	if (@ARGV > 0) {
 	  foreach $arg (@ARGV) {
@@ -109,11 +108,10 @@ FILE: foreach $file (<"/path/to/journal/folder/*.txt">) {
   # Add filtred entry to output after arg loop
 	push @output, $all;
   }
-    
+} # end of loop
+
 # Print output
-
 $length = scalar @output;
-
 if ($number and ($number < $length)) { # number argument specified
   if ($short) {
 	  for ($i=($length-$number); $i < $length; $i++) {
